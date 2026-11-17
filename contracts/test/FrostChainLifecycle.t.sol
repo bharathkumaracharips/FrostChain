@@ -11,7 +11,7 @@ import {SettlementManager} from "../src/SettlementManager.sol";
 import {IShipmentRegistry} from "../src/interfaces/IShipmentRegistry.sol";
 import {IPenaltyEngine} from "../src/interfaces/IAttestationAnchor.sol";
 
-contract ColdChainLifecycleTest {
+contract FrostChainLifecycleTest {
     ShipmentRegistry private shipmentReg;
     DeviceRegistry private deviceReg;
     TemperaturePolicyManager private policyMgr;

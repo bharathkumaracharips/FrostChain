@@ -1,4 +1,4 @@
-# ColdGuard: Decentralized Cold-Chain Monitoring DApp (`cold-chain-monitoring`)
+# FrostChain: Decentralized Cold-Chain Monitoring DApp
 
 ![Solidity](https://img.shields.io/badge/Solidity-0.8.24-363636?style=for-the-badge&logo=solidity)
 ![Foundry](https://img.shields.io/badge/Foundry-Framework-orange?style=for-the-badge)
@@ -6,7 +6,7 @@
 ![IoT ESP32](https://img.shields.io/badge/IoT-ESP32%20%7C%20DS18B20-cyan?style=for-the-badge)
 ![Next.js](https://img.shields.io/badge/Next.js-14%20App%20Router-black?style=for-the-badge&logo=next.js)
 
-An enterprise-grade, IoT-driven cold-chain monitoring platform combining **cryptographically signed sensor telemetry**, **on-chain Merkle batch attestations**, and **automated smart contract escrow settlements** with contractual penalty enforcement for temperature-sensitive shipments.
+An enterprise-grade, IoT-driven FrostChain monitoring platform combining **cryptographically signed sensor telemetry**, **on-chain Merkle batch attestations**, and **automated smart contract escrow settlements** with contractual penalty enforcement for temperature-sensitive shipments.
 
 ---
 
@@ -43,7 +43,7 @@ An enterprise-grade, IoT-driven cold-chain monitoring platform combining **crypt
 ## 2. Directory Structure
 
 ```
-cold-chain-monitoring/
+FrostChain/
 ├── contracts/                  # Foundry Solidity smart contracts
 │   ├── src/
 │   │   ├── interfaces/         # Standard interfaces & custom errors
@@ -55,7 +55,7 @@ cold-chain-monitoring/
 │   │   ├── PenaltyEngine.sol            # Deterministic penalty calculation
 │   │   ├── SettlementManager.sol        # Payout and refund distributions
 │   │   └── ChainOfCustody.sol           # Custody handover timestamps
-│   ├── test/ColdChainLifecycle.t.sol    # Unit & invariant test suites
+│   ├── test/FrostChainLifecycle.t.sol    # Unit & invariant test suites
 │   ├── script/Deploy.s.sol              # Automated deployment script
 │   └── foundry.toml
 ├── firmware/esp32/             # Embedded Rust firmware for ESP32 & DS18B20
@@ -97,21 +97,21 @@ Instead of committing every high-frequency sensor reading on-chain (cost-prohibi
 
 ### 4.1 Smart Contracts (Foundry)
 ```bash
-cd cold-chain-monitoring/contracts
+cd FrostChain/contracts
 forge test
 forge script script/Deploy.s.sol --broadcast
 ```
 
 ### 4.2 Rust Telemetry Ingestion Server
 ```bash
-cd cold-chain-monitoring/backend
+cd FrostChain/backend
 cargo run -p server
 # Ingestion API running at http://localhost:8082
 ```
 
 ### 4.3 Next.js Frontend
 ```bash
-cd cold-chain-monitoring/frontend
+cd FrostChain/frontend
 npm install
 npm run dev
 # Open http://localhost:3000 to launch the Live Telemetry & Escrow Dashboard

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ColdGuard | Decentralized Cold-Chain Monitoring & Escrow DApp",
+  title: "FrostChain | Decentralized Cold-Chain Monitoring & Escrow DApp",
   description: "Authenticated IoT Telemetry, Excursion Alerts, Merkle Attestation Anchoring, and Automated Contractual Escrow Settlement on EVM",
 };
 
@@ -21,7 +21,7 @@ export default function RootLayout({
                 CG
               </div>
               <div>
-                <span className="font-bold text-lg text-white tracking-tight">ColdGuard DApp</span>
+                <span className="font-bold text-lg text-white tracking-tight">FrostChain DApp</span>
                 <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-mono">
                   IoT + Smart Escrow
                 </span>
@@ -37,7 +37,7 @@ export default function RootLayout({
         </header>
         <main>{children}</main>
         <footer className="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
-          ColdGuard Cold-Chain Protocol • Authenticated ESP32 Sensors • Merkle Batch Anchoring • Automated Penalties
+          FrostChain Cold-Chain Protocol • Authenticated ESP32 Sensors • Merkle Batch Anchoring • Automated Penalties
         </footer>
       </body>
     </html>

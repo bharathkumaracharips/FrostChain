@@ -1,6 +1,6 @@
 import { SignedReading, ExcursionReport } from "./types.js";
 
-export class ColdChainClient {
+export class FrostChainClient {
   private baseUrl: string;
 
   constructor(baseUrl: string = "http://localhost:8082") {

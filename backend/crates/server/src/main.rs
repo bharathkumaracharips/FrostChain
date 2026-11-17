@@ -173,7 +173,7 @@ async fn anchor_batch(
             "readingCount": list.len(),
             "startTimestamp": list.first().map(|r| r.timestamp_epoch_seconds).unwrap_or(0),
             "endTimestamp": list.last().map(|r| r.timestamp_epoch_seconds).unwrap_or(0),
-            "ipfsReportCID": "ipfs://QmColdChainTelemetryBatchReportAnchor"
+            "ipfsReportCID": "ipfs://QmFrostChainTelemetryBatchReportAnchor"
         })),
     )
 }
